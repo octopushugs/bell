@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>101bells</title>
+	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<%= nav_bar :responseive => "true", :brand => "101bells", :brand_link => root_path %>
+		<%= menu_group do %>
+			<%= menu_item "Home", root_path %>
+			<%= menu_item "About Us", root_path %>
+		<% end %>
+	<% end %>
+		
+	
+	<%= yield %>
+
+
+<div class="footer navbar-fixed-bottom">
+  <div class="container-fluid">
+      <p class= "text-muted">Copyright 2014 101bells</p>
+  </div>
+</div>
+</body>
+</html>
+
